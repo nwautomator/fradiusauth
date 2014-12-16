@@ -16,9 +16,13 @@ headers = {'Content-type': 'application/json', "X-Consumer-Token": "365753ceb7b4
 resp = requests.post(api_server, data=json.dumps(payload), headers=headers)
 
 if int(resp.status_code) == 201:
+	msg = 'fradiusauth.py: Authentication for %s successful.' % user
+	syslog.syslog(msg)
     print "Accept"
     sys.exit(0)
 
+msg = 'fradiusauth.py: Authentication failed for %s with API status code %s.' % (user, str(resp.status_code))
+syslog.syslog(msg)
 print "Reject"
 sys.exit(1)
 
