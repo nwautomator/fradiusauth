@@ -1,7 +1,7 @@
 fradiusauth
 ===========
 
-Authentication scripts for FreeRADIUS using the Packet API
+Authentication scripts for FreeRADIUS using 2FA
 
 Setup and testing
 =================
@@ -26,4 +26,3 @@ TODO
 ====
 
 1. Need better error handling for scenarios where the API server isn't available, isn't responding, etc...
-2. Need to handle 2-factor authentication.
