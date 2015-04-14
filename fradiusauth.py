@@ -14,7 +14,7 @@ if match:
     otp = match.group(1)
     passwd = match.group(2)
 
-    api_server = "https://api-staging.packet.net:6443/sessions"
+    api_server = "https://api/auth"
     payload = { "login": user, "password": passwd }
 
     msg = 'Authentication attempt by user: ' + user + '\n'
